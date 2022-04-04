@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>About Me</title>
+      <meta charset="utf-8" />
+      
+
+      <!-- css style sheet-->
+      <link rel="stylesheet" href="css/aboutme.css">
+
+    </head>
+          <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+    <body>
+        <div class="header">
+            <h1>Meet Mariana</h1>
+
+        </div>
+        <div class="sidebar">
+            <img src="/Volumes/One Touch/22S-DH151/Week 1/Image.png" width="380px">
+
+            <h2>Mariana Orozco-Berber</h2>
+            <a 
+                href="https://www.linkedin.com/in/marianao-b", target="_blank", style="color: white">Connect with me on LinkedIn
+            </a>
+            <br>
+            <br>
+            <a
+                href="https://www.instagram.com/marianughh/" target="_blank", style="color: white">Follow me on Instagram
+            </a>
+
+        </div>
+        <div class="content">
+            <body>
+               What's up everyone! 
+               <br>
+               <br>
+               <p>My name is Mariana, but I sometimes go by Mo. I am a foruth year Anthropology major, with a minor in Digital Humanities (obviously). I am a Lemelson scholar!
+               I just wrapped up a research project I began working on in the Winter of 2021 regarding the types of narratives constructed around fast-food items in English and in Spanish.
+               I also work as Peer Learning Facilitator for Anthropology with the Academic Advacnement Program here at UCLA, and I've been doing this since the Fall of 2020.</p>
+               <p>I was born in Pomona, CA and grew up in Ontario, CA. Now I live in Westwood, but I am planning to return back home after graduation.</p>
+               <p>Some of my favorite hobbies include:</p>
+                <ul>
+                    <li><b>Going to the Gym</b>
+                        <ul>
+                            <li>I started going in the Spring of 2020.</li>
+                            <li>I do not go consistently, and I still consider myself a beginner.</li>
+                            <li>I like trying new exercises & visiting different gyms!</li>
+                        </ul>
+                    </li>
+                    <li><b>Trying different coffee shops with my friends. Some of my favorites so far include:</b>
+                        <ul>
+                            <li><i>Groundwork Coffee Co.</i></li>
+                            <li><i>La Monarca Bakery & Cafe</i></li>
+                            <li><i>Ministry of Coffee</i></li>
+                            <li><i>Lazy Daisy</i></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Use this map to check them out!</p>
+                <div id="map"></div>
+
+            </body>
+        </div>
+        <script>
+            var map = L.map('map').setView([20.296160429659, -101.96985271905932], 17);
+    
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+    
+            var marker = L.marker([34.06203500231809, -118.44399145962304]).addTo(map)
+                        .bindPopup('Ministry of Coffee<br> A bit pricey, but they have great cold brew. My go-to order is a 16oz cold brew, black with 2 stevias')
+                        .openPopup();
+            var marker = L.marker([34.07369027904861, -118.36668279560423]).addTo(map)
+                        .bindPopup('Groundwork Coffee Co.<br> The breakfast burrito is amazing! The cold brew is not my favorite, but it was good.')
+                        .openPopup();   
+            var marker = L.marker([34.03605393873009, -118.49063502247772]).addTo(map)
+                        .bindPopup('La Monarca Bakery & Cafe<br> They have a wide variety of Mexican Pastries to chosse from. The coffee is not something I would go back for, but the mini conchas were tasty!')
+                        .openPopup();
+            var marker = L.marker([34.075295841150165, -118.44626301017675]).addTo(map)
+                        .bindPopup('Lazy Daisy Cafe<br> They have great food, although a little overpriced in my opinion. Their iced coffee is basically an Americano, but it is good. My favorite item here is the Vanilla Chai (iced and hot)')
+                        .openPopup();   
+        </script>
+        
+    </body>
+</html>
