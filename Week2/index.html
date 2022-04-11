@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chasing Mariana</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
+    </script>
+
+</head>
+<body>
+
+	<div class="header">
+		<h1>Chasing Mariana: Where I've Lived</h1>
+	</div>
+
+	<div class="sidebar">
+        <p>Although I have primarily lived in one city throughout my whole life, <br>
+            I have spent a lot of time with family and friends in several places. <br>
+            Navigate through the map to learn more!</p>
+    <h2><img src= images/home.png width= "20px">
+        Ontario, CA
+    </h2>
+    <h2><img src= images/school.png width= "20px">
+        Los Angeles,CA
+    </h2>
+    <h2><img src= images/pays.jpeg width= "20px">
+        Claremont,CA
+    </h2>
+    <h2><img src= images/family.jpeg width= "40px">
+        San Joaquin,CA
+    </h2>
+    <h2><img src= images/family.jpeg width= "40px">
+        Buckeye,AZ
+    </h2>
+        
+	</div>
+
+
+	<div class="content">
+		<div id="map"></div>
+	</div>
+    
+    <!-- Javascript section -->
+	<script>
+
+		var map = L.map('map').setView([34.0570, -117.6526], 7);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+        var newPin = L.icon ({
+            iconUrl: 'images/marker.png',
+            iconSize: [50, 50]
+        })
+                
+                let data = [
+	                {
+		                'title':'Ontario',
+                        'id': 0,
+		                'lat': 34.0570,
+		                'lon': -117.6526,
+                        'description': "This is where I grew up and have lived my whole life. From 1999-2016, my family and I lived in a small backhouse. In 2016 we were eviceted and have been living in the hom epictured above sinve 2017. This new house was only 2 blocks away from where we used to live!",
+	                    'image' : '<img src= images/ontario.jpeg width= "300px">',
+                        },
+	                {
+		                'title':'Los Angeles',
+                        'id': 1,
+		                'lat': 34.0620,
+		                'lon': -118.4443,
+                        'description': "I moved to Westoowood in 2018. I lived in the dorms my first two years, and now I live right across the street from Target. I am hoping to move into a new apartment outside of Westwood and away from Ontario after graduation.",
+	                    'image' : '<img src= images/westwood.jpg width= "300px">'
+                        },
+	                {
+		                'title':'San Joaquin',
+                        'id': 2,
+		                'lat': 36.6066,
+		                'lon': -120.1890,
+                        'description': "All of my family from my mom's side lives here, and I spent many summers here as a kid with my grandparents",
+	                    'image' : '<img src= images/sj.png width= "300px">'
+                        },
+	                {
+		                'title':'Buckeye',
+                        'id': 3,
+		                'lat': 33.3703,
+		                'lon': -112.5838,
+                        'description': "Some of my favorite cousins from my dad's side of the family live here, and I spent many summers, winter and spring breaks with them throughout high school. I still visit them on weekends!",
+	                    'image' : '<img src= images/az.jpg width= "300px">'
+                        },
+	                {
+		                'title':'Claremont',
+                        'id': 4,
+		                'lat': 34.0967,
+		                'lon': -117.7198,
+                        'description': "As a high school student, I was a part of the Pomona Academy for Youth Success (PAYS), a college outreach program from underprivileged youth. I spent 4 weeks of my summer dorming and taking classes at Pomona college from 2015-2018.",
+	                    'image' : '<img src= images/claremont.jpg width= "300px">'
+                        }
+                    ]; 
+
+        data.forEach(function(item){
+	        var marker= L.marker([item.lat, item.lon], {
+                icon: newPin})
+            .addTo(map)
+                .bindPopup([item.title] + "<br>" + [item.image] + "<br>" + [item.description]);
+            
+
+        });        
+
+	</script>
+
+
+</body>
+</html>
