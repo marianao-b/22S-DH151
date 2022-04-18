@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>World</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="CSS/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<div class="header">
+		<h1>Coffee Spots near UCLA</h1>
+        a guide to the best and worst, according to regular people
+	</div>
+	<div class="sidebar">
+		<h2>These are a few of the coffee shops I've tried in LA.</h2>
+        <sub>in order from most to least favorite:</sub> <br>
+	</div>
+	<div class="content">
+        <h1>What people are saying:</h1>
+        <p>Scroll through these yelp reviews to see what others have to say about these places! You can read the most recent review by Yelpers.<br><br>
+            You can also click on the review to be redirected to the shop's Yelp page.</p>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <span class="yelp-review" data-review-id="apWCKR7UnF1eSUMFOnLIpQ" data-hostname="www.yelp.com">
+          Read <a href="https://www.yelp.com/user_details?userid=UweyOtQFEGHCA-nSzzVN8g" rel="nofollow noopener">Madie D.</a>'s 
+          <a href="https://www.yelp.com/biz/alfred-coffee-los-angeles-19?hrid=apWCKR7UnF1eSUMFOnLIpQ" rel="nofollow noopener">review</a> of 
+          <a href="https://www.yelp.com/biz/Wk7TOPbpK0HlHRuN4s9lYw" rel="nofollow noopener">Alfred Coffee</a> on 
+          <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
+          
+          <script 
+            src="https://www.yelp.com/embed/widgets.js" 
+            type="text/javascript" async>
+          </script>
+
+        </span>
+        
+      <div class="text">Alfred Coffee</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <span class="yelp-review" data-review-id="E04GI9KnMG42aP6xRHhr4g" data-hostname="www.yelp.com">
+          Read <a href="https://www.yelp.com/user_details?userid=iyaHJ9DXmV5nmoZaocWAug" rel="nofollow noopener">Megan E.</a>'s 
+          <a href="https://www.yelp.com/biz/ministry-of-coffee-los-angeles?hrid=E04GI9KnMG42aP6xRHhr4g" rel="nofollow noopener">review</a> of 
+          <a href="https://www.yelp.com/biz/C27AlKzYzTJwi3bNAWIXpQ" rel="nofollow noopener">Ministry Of Coffee</a> on 
+          <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
+          
+          <script 
+            src="https://www.yelp.com/embed/widgets.js" 
+            type="text/javascript" async>
+          </script>
+
+        </span>
+
+      <div class="text">Ministry of Coffee</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <span class="yelp-review" data-review-id="DujUOGGGqMQwtZNw429SlA"
+            data-hostname="www.yelp.com">
+        Read <a href="https://www.yelp.com/user_details?userid=RQT9QoVcQd9gnKhayD5cUw" 
+          rel="nofollow noopener">Akiko I.</a>'s
+        <a href="https://www.yelp.com/biz/lo-cal-coffee-and-market-santa-monica-3?hrid=DujUOGGGqMQwtZNw429SlA" rel="nofollow noopener">review</a> of 
+        <a href="https://www.yelp.com/biz/VRm-vEYB6k0a81_nfGObJA" rel="nofollow noopener">Lo/Cal Coffee & Market</a> on 
+        <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
+
+        <script 
+            src="https://www.yelp.com/embed/widgets.js" 
+            type="text/javascript" async>
+        </script>
+
+      </span>
+
+      <div class="text">Lo/Cal</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <span class="yelp-review" data-review-id="VMJGIac4r-kvyOWWUzFrxg" 
+            data-hostname="www.yelp.com">
+            Read <a href="https://www.yelp.com/user_details?userid=CXOKxLz7aPQRjt_m-2TFNA" rel="nofollow noopener">philip s.</a>'s 
+                <a href="https://www.yelp.com/biz/goodboybob-coffee-roasters-culver-city?hrid=VMJGIac4r-kvyOWWUzFrxg" rel="nofollow noopener">review</a> of 
+                <a href="https://www.yelp.com/biz/4gsVrBy3bVyDs2Cz-PUvxQ" rel="nofollow noopener">Goodboybob Coffee Roasters</a> on 
+                <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
+                
+            <script src="https://www.yelp.com/embed/widgets.js" 
+                        type="text/javascript" async>
+            </script>
+        </span>
+  
+        <div class="text">Goodboybob Coffee Roasters</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <span class="yelp-review" data-review-id="dXK07WDKW47Ak15MOlTGJQ" data-hostname="www.yelp.com">
+            Read <a href="https://www.yelp.com/user_details?userid=fkZMgxHCRqAWxJROtritsw" rel="nofollow noopener">Sharon L.</a>'s 
+                <a href="https://www.yelp.com/biz/blueys-kitchen-and-market-santa-monica?hrid=dXK07WDKW47Ak15MOlTGJQ" rel="nofollow noopener">review</a> of 
+                <a href="https://www.yelp.com/biz/rHFYoCqft0k1PcMlRZ_KWg" rel="nofollow noopener">Blueys Kitchen and Market</a> on 
+                <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
+                
+                <script src="https://www.yelp.com/embed/widgets.js" 
+                        type="text/javascript" async>
+                </script>
+                
+        </span>
+  
+        <div class="text">Blueys Kitchen and Market</div>
+      </div>
+  
+    <!-- Next and previous buttons -->  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+         <br>
+  
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <br>
+        <h1>Searching for the best?</h1>
+        <p>Click on any button on the left to see where the shop is located, and find out more about my experiences at each one. You can also click on any link below to be redirected to the website of the respective shop</p>
+        <ul>
+          <li><a href="https://alfred.la/">Alfred Coffee</a></li> 
+          <li><a href="https://moc.coffee/westwood-menu/">Minstry of Coffee</a></li> 
+          <li><a href="https://www.local-coffee.com/">Lo/Cal</a></li>
+          <li><a href="https://www.philzcoffee.com/?utm_source=gmb&utm_medium=yext">Philz</a></li>
+          <li><a href="https://goodboybob.com/">Goodboybob Coffee Roasters</a></li>
+          <li><a href="https://blueyskitchen.com/">Bluey Kitchen and Market</a></li>
+        </ul>
+
+
+
+<div id="map"></div>
+</div>
+
+   
+    <!-- javascript map now a link, js code in its own file -->
+    <!-- only time js code should be in html should be: lazy, quick prototype, personal preferance --> 
+	<script src="js/map.js"></script>
+
+
+</body>
+</html>
